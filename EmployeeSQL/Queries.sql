@@ -25,6 +25,12 @@ FROM "Employees"
 WHERE extract(year from hire_date) = 1986;  
 
 -- 3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+SELECT departments.dept_no, departments.dept_name, department_manager.emp_no, employees.last_name, employees.first_name
+FROM "Departments"
+JOIN "Department_Manager" 
+ON departments.dept_no = department_manager.dept_no
+JOIN "Employees" 
+ON department_manager.emp_no = employees.emp_no;
 
 -- 4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
