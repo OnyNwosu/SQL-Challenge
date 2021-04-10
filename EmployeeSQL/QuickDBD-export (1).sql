@@ -44,7 +44,7 @@ CREATE TABLE "Department_Employee" (
     "emp_no" int   NOT NULL,
     "dept_no" varchar(50)   NOT NULL,
     CONSTRAINT "pk_Department_Employee" PRIMARY KEY (
-        "emp_no"
+        "emp_no", "dept_no"
      )
 );
 
