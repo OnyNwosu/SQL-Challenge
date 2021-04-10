@@ -1,0 +1,35 @@
+Employees
+-
+emp_no PK int 
+emp_title_id string
+birth_date date
+first_name varchar(50)
+last_name varchar(50)
+sex string
+hire_date date
+
+Salaries
+-
+emp_no PK int FK - Employees.emp_no
+salary int
+
+Titles
+-
+title_id PK string FK -< Employees.emp_title_id
+title string
+
+
+Departments
+-
+dept_no PK string
+dept_name varchar(30)
+
+Department_Employee
+-
+emp_no PK int FK - Employees.emp_no
+dept_no string FK >- Departments.dept_no
+
+Department_Manager
+-
+dept_no PK string FK >- Departments.dept_no
+emp_no PK int FK - Employees.emp_no
