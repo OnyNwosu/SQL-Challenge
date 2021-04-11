@@ -47,6 +47,13 @@ WHERE first_name LIKE 'Hercules'
 AND last_name LIKE 'B%';
 
 -- 6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
+SELECT e.emp_no, e.last_name, e.first_name, dp.dept_name
+FROM "Employees" AS e
+INNER JOIN "Department_Employee" AS d ON
+e.emp_no = d.emp_no
+INNER JOIN "Departments" AS dp ON
+dp.dept_no = d.dept_no
+WHERE dp.dept_name LIKE 'Sales';
 
 -- 7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
