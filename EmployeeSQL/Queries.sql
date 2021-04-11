@@ -71,3 +71,8 @@ COUNT(last_name) AS frequency
 FROM "Employees"
 GROUP BY last_name
 ORDER BY frequency DESC;
+
+-- Epilogue
+SELECT *
+FROM "Employees"
+WHERE emp_no = 499942; 
